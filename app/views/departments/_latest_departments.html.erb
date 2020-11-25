@@ -1,0 +1,7 @@
+<% @departments.each do |department|%>
+    <div class="col-3">
+        <% department_thumbnail property %>
+        <h3><%= department.name %></h3>
+        <p><%= department.address %></p>
+    </div>
+<% end %>
