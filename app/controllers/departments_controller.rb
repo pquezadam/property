@@ -1,6 +1,7 @@
 class DepartmentsController < ApplicationController
   before_action :set_department, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_account!, only: [:new, :create, :destroy]
+  before_action :set_sidebar, except: [:show]
 
   # GET /departments
   # GET /departments.json
@@ -67,6 +68,10 @@ class DepartmentsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_department
       @department = Department.find(params[:id])
+    end
+
+    def set_sidebar
+      @show_sidebar = true
     end
 
     # Only allow a list of trusted parameters through.

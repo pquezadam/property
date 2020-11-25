@@ -1,7 +1,12 @@
 <% @departments.each do |department|%>
     <div class="col-3">
-        <% department_thumbnail property %>
-        <h3><%= department.name %></h3>
+        <%= link_to(department_thumbnail(department), department_path(department)) %>
+        <h3 class="h5 mt-3"><%= department.name %></h3>
         <p><%= department.address %></p>
+        <div class="details">
+            <span><i data-feather="users"></i></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 <% end %>
