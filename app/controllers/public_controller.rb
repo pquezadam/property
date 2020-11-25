@@ -1,5 +1,5 @@
 class PublicController < ApplicationController
   def main
-    @departments = department.latest
+    @departments = @department.latest
   end
 end

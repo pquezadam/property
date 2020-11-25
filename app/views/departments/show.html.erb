@@ -1,29 +1,41 @@
-<p id="notice"><%= notice %></p>
+<div class="department-main-photo" style="background-image:url('<%= department_photo_url @department %>')">
+  <div class="photo-overlay">
+  </div>
+</div>  
 
-<p>
-  <strong>Name:</strong>
-  <%= @department.name %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-8">      
+    <p>
+      <strong>Name:</strong>
+      <%= @department.name %>
+    </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @department.address %>
-</p>
+    <p>
+      <strong>Address:</strong>
+      <%= @department.address %>
+    </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @department.price %>
-</p>
+    <p>
+      <strong>Price:</strong>
+      <%= @department.price %>
+    </p>
 
-<p>
-  <strong>Rooms:</strong>
-  <%= @department.rooms %>
-</p>
+    <p>
+      <strong>Rooms:</strong>
+      <%= @department.rooms %>
+    </p>
 
-<p>
-  <strong>Bathrooms:</strong>
-  <%= @department.bathrooms %>
-</p>
+    <p>
+      <strong>Bathrooms:</strong>
+      <%= @department.bathrooms %>
+    </p>
 
-<%= link_to 'Edit Department', edit_department_path(@department), class: "btn btn-success" %> |
-
+    
+    </div>
+    <div class="col-4">
+      <%= render "departments/agent_details"%>
+      
+    </div>
+  </div>
+</div>

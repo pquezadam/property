@@ -12,6 +12,7 @@ class DepartmentsController < ApplicationController
   # GET /departments/1
   # GET /departments/1.json
   def show
+    @agent = @department.account
   end
 
   # GET /departments/new
